@@ -1,0 +1,42 @@
+{
+  "name": "InvoiceView",
+  "plural": "invoice-view",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "number": {
+      "type": "number",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "total": {
+      "type": "number"
+    },
+    "createdat": {
+      "type": "date"
+    },
+    "owner": {
+      "type": "object",
+      "required": true
+    },
+    "client": {
+      "type": "object",
+      "required": true
+    },
+    "items": {
+      "type": [
+        "object"
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
