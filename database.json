@@ -1,0 +1,10 @@
+{
+  "development": {
+    "driver": "pg",
+    "host": "localhost",
+    "database": "loopbackoptimization",
+    "user": "loopbackoptimization"
+  },
+  "defaultEnv": "development",
+  "sql-file": true
+}

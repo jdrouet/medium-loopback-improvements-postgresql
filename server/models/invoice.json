@@ -1,0 +1,41 @@
+{
+  "name": "Invoice",
+  "plural": "invoices",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "number": {
+      "type": "number",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "createdat": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "items": {
+      "type": "hasMany",
+      "model": "InvoiceItem",
+      "foreignKey": "invoiceid"
+    },
+    "owner": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "ownerid"
+    },
+    "client": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "clientid"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

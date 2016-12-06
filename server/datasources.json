@@ -1,0 +1,10 @@
+{
+  "postgres": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "loopbackoptimization",
+    "name": "postgres",
+    "user": "loopbackoptimization",
+    "connector": "postgresql"
+  }
+}

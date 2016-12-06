@@ -1,0 +1,29 @@
+{
+  "name": "Account",
+  "plural": "accounts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "invoices": {
+      "type": "hasMany",
+      "model": "Invoice",
+      "foreignKey": "ownerid"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
